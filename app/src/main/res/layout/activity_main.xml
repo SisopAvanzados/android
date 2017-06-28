@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    android:screenOrientation="portrait"
+    tools:context="com.example.brian.Estacionamiento.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="212dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cambiar"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeValueGPS"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
+
+        android:id="@+id/titleTextGPS"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:text="LOCALIZACION GPS"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+
+        android:id="@+id/locationControllerGPS"
+        android:layout_width="212dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/titleTextGPS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:onClick="toggleGPSUpdates"
+        android:text="Posición"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextGPS" />
+
+    <TextView
+
+        android:id="@+id/longitudeTextGPS"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/locationControllerGPS"
+
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="Longitud"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/longitudeValueGPS"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeTextGPS" />
+
+    <TextView
+
+        android:id="@+id/longitudeValueGPS"
+
+        android:layout_width="116dp"
+
+        android:layout_height="26dp"
+
+        android:layout_below="@id/locationControllerGPS"
+
+        android:layout_toRightOf="@id/longitudeTextGPS"
+        android:layout_marginRight="74dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeValueGPS"
+        android:layout_marginEnd="74dp" />
+
+        //android:paddingLeft="@dimen/activity_horizontal_margin"
+
+        android:text="0.0000"
+
+        android:textSize="20sp"
+        android:layout_marginRight="64dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="42dp"
+        app:layout_constraintTop_toBottomOf="@+id/locationControllerGPS" />
+
+    <TextView
+
+        android:id="@+id/latitudeTextGPS"
+
+        android:layout_width="84dp"
+
+        android:layout_height="26dp"
+
+        android:layout_below="@id/longitudeTextGPS"
+
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="27dp"
+        android:text="Latitud"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/latitudeValueGPS"
+        app:layout_constraintTop_toBottomOf="@+id/locationControllerGPS" />
+
+    <TextView
+
+        android:id="@+id/latitudeValueGPS"
+
+        android:layout_width="118dp"
+
+        android:layout_height="26dp"
+
+        android:layout_below="@id/longitudeValueGPS"
+
+        android:layout_toRightOf="@id/longitudeTextGPS"
+        android:layout_marginRight="74dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/locationControllerGPS"
+        android:layout_marginEnd="74dp" />
+
+    <TextView
+        android:id="@+id/locArd"
+        android:layout_width="240dp"
+        android:layout_height="31dp"
+        android:text="LOCALIZACION ARDUINO"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="225dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:text="Latitud"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/locArd"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/latArd"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.488" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="78dp"
+        android:layout_height="26dp"
+        android:text="Longitud"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/longArd"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <EditText
+        android:id="@+id/longArd"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/latArd"
+        android:layout_marginRight="9dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <EditText
+        android:id="@+id/latArd"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/locArd"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" /><![CDATA[
+
+
+
+
+
+    //android:paddingLeft="@dimen/activity_horizontal_margin"
+
+        android:text="0.0000"
+
+        android:textSize="20sp"
+        android:layout_marginRight="74dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeValueGPS" />
+
+
+
+]]>
+</android.support.constraint.ConstraintLayout>
